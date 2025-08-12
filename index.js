@@ -33,6 +33,7 @@ ctx.fillRect(100, 0, 400, 900);
 function startGame() {
     dialog = document.getElementById("dialog");
     dialog.close();
+    speedUp = 0;
     choosePiece();
     id = setInterval(runGame, 1);
 
