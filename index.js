@@ -6,7 +6,7 @@ var nextTile;
 var tile1 = document.getElementById("tile1");
 var tile2;
 const size = 80;
-const timeToBottom = 300;
+var timeToBottom = 300;
 var speedUp = 0;
 let y = 0;
 let x = 2;
@@ -30,7 +30,8 @@ ctx.fillRect(0, 0, 600, 900);
 ctx.fillStyle="#D3D3D3";
 ctx.fillRect(100, 0, 400, 900); 
 
-function startGame() {
+function startGame(speed) {
+    timeToBottom = speed;
     dialog = document.getElementById("dialog");
     dialog.close();
     speedUp = 0;

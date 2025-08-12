@@ -16,7 +16,11 @@
     </center>
     <dialog id="dialog" open><p id="dialogText">To play, use the keyboard's arrow keys to move the number left or right. Clear pieces by having three consecutive numbers (ex. 1,2,3) either horizontally or vertically. If you run out of space, you lose!<br><br>Hint: Press the down arrow to make the number drop faster!</p>
     </br>
-        <center><button id="startGame" onclick="startGame()">Play!</button></center>
+    Choose a speed:
+        <center><button id="startGameSlow" onclick="startGame(900)">Heejae Speed (SLOW)</button>
+            <br><button id="startGameNormal" onclick="startGame(600)">Regular Speed</button>
+            <br><button id="startGameFast" onclick="startGame(300)">Andy Speed (FAST)</button>
+        </center>
     </dialog>
     <div class="hidden" display:'none'>
         <img
