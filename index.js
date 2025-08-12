@@ -331,7 +331,7 @@ window.addEventListener(
             x++;
         } else if (keyPress === "ArrowDown") {
             if(speedUp === 0) {
-            speedUp-=250;
+            speedUp-=(timeToBottom * 0.95);
             }
         }
     },
