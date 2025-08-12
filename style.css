@@ -1,0 +1,43 @@
+
+
+
+body {
+    background-color: #6A3940;
+  }
+
+p {
+    color: white;
+}
+
+dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-425px, -50%); /* Adjusts for the element's own size */
+    /* Your dialog's specific styling */
+    max-width: 600px;
+    overflow-wrap: normal;
+    text-align: justify;
+    font-weight: bold;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #6A3940;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999; 
+}
+
+button {
+    background-color: white;
+    font-size: 18px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.hidden {
+    display: none;
+}

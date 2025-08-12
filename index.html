@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <<title>FALLING NUMBERS</title>>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <center>
+        <img id="title" src="/title.png" />
+        <p>A dumb game by a dumb idiot - 앤드류 루저</p>
+        <canvas id="myCanvas" width="600" height="800">
+        </canvas>
+    </center>
+    <dialog id="dialog" open><p id="dialogText">To play, use the keyboard's arrow keys to move the number left or right. Clear pieces by having three consecutive numbers (ex. 1,2,3) either horizontally or vertically. If you run out of space, you lose!<br><br>Hint: Press the down arrow to make the number drop faster!</p>
+    </br>
+        <center><button id="startGame" onclick="startGame()">Play!</button></center>
+    </dialog>
+    <div class="hidden" display:'none'>
+        <img
+          id="tile0"
+          src="/tile0.png"
+          width="80"
+          height="80" />
+        <img
+          id="tile1"
+          src="/tile1.png"
+          width="80"
+          height="80" />
+        <img
+            id="tile2"
+            src="/tile2.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile3"
+            src="/tile3.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile4"
+            src="/tile4.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile5"
+            src="/tile5.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile6"
+            src="/tile6.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile7"
+            src="/tile7.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile8"
+            src="/tile8.png"
+            width="80"
+            height="80" />
+        <img
+            id="tile9"
+            src="/tile9.png"
+            width="80"
+            height="80" />
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
