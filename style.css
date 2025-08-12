@@ -13,9 +13,9 @@ dialog {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-425px, -50%); /* Adjusts for the element's own size */
+    transform: translate(-50%, -50%); /* Adjusts for the element's own size */
     /* Your dialog's specific styling */
-    max-width: 600px;
+    max-width: 100%;
     overflow-wrap: normal;
     text-align: justify;
     font-weight: bold;
