@@ -85,6 +85,7 @@ function gameOver() {
     dialog.style.transform = 'translateX(-50%)';
     dialog.style.transform = 'translateY(-50%)';  
     dialog.showModal();
+    score=0;
     speedUp = 0;
 }
 
