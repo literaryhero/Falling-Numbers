@@ -7,6 +7,19 @@ body {
 
 p {
     color: white;
+    user-select: none;
+    /* For cross-browser compatibility, include vendor prefixes */
+    -webkit-user-select: none; /* Safari, Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer, Edge */
+}
+
+img {
+    max-width: 100%;
+}
+
+canvas {
+    max-width: 100%;
 }
 
 dialog {

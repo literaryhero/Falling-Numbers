@@ -337,3 +337,23 @@ window.addEventListener(
     },
     true,
 );
+
+window.addEventListener('touchstart', function(event) {
+    // figure out which part of the screen and act accordingly
+    const touch = event.touches[0];
+    const xCoord = touch.pageX;
+    const yCoord = touch.pageY;
+    this.alert(yCoord);
+    if(yCoord>(window.screen.height * .7)) {
+        if(speedUp === 0) {
+            speedUp-=(timeToBottom * 0.95);
+            }
+    } else if(xCoord > (this.screen.availWidth * .5) && x < 4 && (y < (myCanvas.height - (rowCount[column+1].length * 80) - 40))) {
+        x++;
+    } else if (xCoord < (this.screen.availWidth * .5) && x > 0 && (y < (myCanvas.height - (rowCount[column-1].length * 80) - 40))){ 
+        x--;
+    }
+
+    // Prevent default browser behavior like scrolling/zooming if needed
+    event.preventDefault(); 
+});
