@@ -343,7 +343,6 @@ window.addEventListener('touchstart', function(event) {
     const touch = event.touches[0];
     const xCoord = touch.pageX;
     const yCoord = touch.pageY;
-    this.alert(yCoord);
     if(yCoord>(window.screen.height * .7)) {
         if(speedUp === 0) {
             speedUp-=(timeToBottom * 0.95);
