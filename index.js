@@ -1,6 +1,6 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var tileNo = 9; // remove the =1 later
+var tileNo = 9;
 var tile0;
 var nextTile;
 var tile1 = document.getElementById("tile1");
@@ -41,7 +41,7 @@ function startGame(speed) {
 }
 
 function runGame() {
-            if (y >= ((myCanvas.height - size)- (rowCount[x].length * 80))) {
+            if (y >= ((myCanvas.height - size) - (rowCount[x].length * 80))) {
                 if (rowCount[x].length >= 10) {
                     clearInterval(id);
                     gameOver();
@@ -88,6 +88,8 @@ function gameOver() {
     dialog.showModal();
     score=0;
     speedUp = 0;
+    x = 2;
+    y=0;
 }
 
 function choosePiece() {
@@ -325,9 +327,9 @@ window.addEventListener(
     "keydown",
     (event) => {
         let keyPress = event.code;
-        if (keyPress === "ArrowLeft" && x > 0 && (y < (myCanvas.height - (rowCount[column-1].length * 80) - 40))) {
+        if (keyPress === "ArrowLeft" && x > 0 && (y < (myCanvas.height - (rowCount[x-1].length * 80) - 40))) {
             x--;
-        } else if (keyPress === "ArrowRight" && x < 4 && (y < (myCanvas.height - (rowCount[column+1].length * 80) - 40))) {
+        } else if (keyPress === "ArrowRight" && x < 4 && (y < (myCanvas.height - (rowCount[x+1].length * 80) - 40))) {
             x++;
         } else if (keyPress === "ArrowDown") {
             if(speedUp === 0) {
