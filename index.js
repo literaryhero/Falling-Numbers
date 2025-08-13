@@ -349,9 +349,9 @@ window.addEventListener('touchstart', function(event) {
         if(speedUp === 0) {
             speedUp-=(timeToBottom * 0.95);
             }
-    } else if(xCoord > (this.screen.availWidth * .5) && x < 4 && (y < (myCanvas.height - (rowCount[column+1].length * 80) - 40))) {
+    } else if(xCoord > (this.screen.availWidth * .5) && x < 4 && (y < (myCanvas.height - (rowCount[x+1].length * 80) - 40))) {
         x++;
-    } else if (xCoord < (this.screen.availWidth * .5) && x > 0 && (y < (myCanvas.height - (rowCount[column-1].length * 80) - 40))){ 
+    } else if (xCoord < (this.screen.availWidth * .5) && x > 0 && (y < (myCanvas.height - (rowCount[x-1].length * 80) - 40))){ 
         x--;
     }
 
