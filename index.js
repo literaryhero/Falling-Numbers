@@ -23,6 +23,7 @@ let rowCount = [
     [],
     []
 ];
+let pieces = [];
 
 ctx.fillStyle="#6A3940";
 ctx.fillRect(0, 0, 600, 900);
@@ -93,15 +94,24 @@ function gameOver() {
 }
 
 function choosePiece() {
+    if(pieces.length === 0) {
+        setPieces();
+    }
     if (!!tile0) {
         tileNo = nextTile;
-        nextTile = (Math.floor(Math.random() * 9)) + 1;
+        const randomPiece = (Math.floor(Math.random() * (pieces.length - 1)));
+        nextTile = pieces[randomPiece];
+        removed = pieces.splice(randomPiece, 1);
         tile1 = document.getElementById("tile" + tileNo);
         tile0 = document.getElementById("tile" + nextTile);
     } else {
-        nextTile = (Math.floor(Math.random() * 9)) + 1;
+        const randomPiece = (Math.floor(Math.random() * (pieces.length - 1)));
+        nextTile = pieces[randomPiece];
+        removed = pieces.splice(randomPiece, 1); 
         tile0 = document.getElementById("tile" + nextTile);
-        tileNo = (Math.floor(Math.random() * 9)) + 1;    
+        const randomPiece2 = (Math.floor(Math.random() * (pieces.length - 1)));
+        tileNo = pieces[randomPiece2];
+        removed = pieces.splice(randomPiece, 1);
         tile1 = document.getElementById("tile" + tileNo);
      }
 }
@@ -122,6 +132,17 @@ function nextPiece() {
     choosePiece();
     setTimeout(function() {
         id = setInterval(runGame, 1);}, 200);
+}
+
+function setPieces() {
+ if(pieces.length === 0) {
+    for(i = 0; i < 9; i++) {
+        const newNumber = i + 1;
+        pieces.push(newNumber);
+        pieces.push(newNumber);
+        pieces.push(newNumber);
+    }
+ }
 }
 
 function setBoard() {
@@ -300,7 +321,6 @@ function clearBoard(column) {
             } 
             break;
     }
-
 }
 
 function scoreboard() {
